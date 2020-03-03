@@ -17,24 +17,30 @@
 <!--HEADER-->
     
     
-    <header>
+    <header id="header">
         <div id="headerTop">
             <div id="headerLeft">
                 <h1 class="title"><span>Danijela Kuprešanin</span> | Front-end developer</h1>
             </div>
             <div id="headerMenu">
-                <button type="button" onclick="showMenu('navMenu',800)"><i class="fas fa-bars"></i></button>
+                <a id="hamburger" href="#"><i class="fas fa-bars"></i></a>
                 <nav>
                     <ul id="navMenu">
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#aboutMe">About me</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#pLink">Projects</a></li>
+                        <li><a href="#sLink">Skills</a></li>
+                        <li><a href="#aLink">About</a></li>
+                        <li><a href="#fLink">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
+        <div id="arrow">
+            <a href="#header">
+                <i class="fas fa-angle-up"></i>
+            </a>
+        </div>
     </header>
+
 
 
 
@@ -47,7 +53,7 @@
         <!--PROJECTS-->
 
 
-        <h2>Projects</h2>
+        <h2 id="pLink">Projects</h2>
             <div id="projects">
                 <div class="listOfProjects">
                     <div class="items">
@@ -90,8 +96,8 @@
             </article>
         </div>-->
 
-         <h2>Skills</h2>
-         <div id="skill">  
+         <h2 id="sLink">Skills</h2>
+         <div id="skills">  
             <div id="skillBoxes">
                 <div class="skillBox">
                         <p>HTML 5</p>
@@ -123,7 +129,7 @@
         <!--ABOUT ME-->
 
 
-        <h2>About me</h2>
+        <h2 id="aLink">About me</h2>
         <div id="aboutMe">
             <div id="more">
                 <p>Hello! My name is Danijela and I am from Belgrade. I graduaded from Fifth Belgrade Gymnasium and my love and intrest for web design started back then. Currently I'm studying IT technologies at Visoka ICT which will help me in maintaining my end goal of becoming video game tester. </p>
@@ -140,7 +146,7 @@
     <!--FOOTER-->
 
 
-    <footer>
+    <footer id="fLink">
         <div id="links">
             <h3>Links</h3>
             <div id="code">

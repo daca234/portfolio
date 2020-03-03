@@ -11,8 +11,6 @@
 }
 
 body {
-  /*background: rgb(244,183,209);
-  background: radial-gradient(circle, rgba(244,183,209,1) 0%, rgba(0,54,119,1) 66%, rgba(0,54,119,1) 66%);*/
   background: #f4b7d1;
   background: linear-gradient(159deg, #f4b7d1 15%, #003677 50%, #f4b7d1 100%);
 }
@@ -31,7 +29,7 @@ ul li a:hover {
           transform: translateY(-2px);
 }
 
-h2, h3, p {
+h3, p {
   color: #003677;
 }
 
@@ -40,8 +38,10 @@ h2 {
   color: #f4b7d1;
   text-align: center;
   padding: 15px;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
 }
 
 h3 {
@@ -52,9 +52,10 @@ h3 {
   font-size: 23px;
 }
 
-header {
+#header {
   width: 100%;
   height: 600px;
+  z-index: 2;
   background-image: url("../img/theone.jpg");
   background-position: bottom;
   background-size: cover;
@@ -136,18 +137,30 @@ header {
 
 #headerMenu ul li a {
   font-size: 20px;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
+  -webkit-transition: font-size 0.8s;
+  transition: font-size 0.8s;
 }
 
 #headerMenu ul li a:hover {
   text-decoration: underline;
   color: #fff;
   font-size: 22px;
+  -webkit-transition: font-size 0.8s, color 0.8s;
+  transition: font-size 0.8s, color 0.8s;
 }
 
-#headerMenu button {
-  visibility: hidden;
+#headerMenu #hamburger {
+  display: none;
+}
+
+#arrow {
+  position: fixed;
+  bottom: 1%;
+  right: 2%;
+  font-size: 60px;
+  z-index: 1;
+  color: #f4b7d1;
+  text-shadow: 2px 2px 7px #003677;
 }
 
 #middlePart {
@@ -223,7 +236,7 @@ header {
   font-weight: bold;
 }
 
-#skill {
+#skills {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -240,7 +253,7 @@ header {
           align-items: center;
 }
 
-#skill #skillBoxes {
+#skills #skillBoxes {
   width: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -260,7 +273,7 @@ header {
           box-shadow: 10px 10px 10px #003677;
 }
 
-body #skill #skillBoxes .skillBox {
+body #skills #skillBoxes .skillBox {
   width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -276,21 +289,22 @@ body #skill #skillBoxes .skillBox {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 30px;
+  color: #003677;
 }
 
-body #skill #skillBoxes .skillBox:hover {
+body #skills #skillBoxes .skillBox:hover {
   -webkit-transform: rotate(10deg);
           transform: rotate(10deg);
 }
 
-body #skill #skillBoxes .skillBox p {
+body #skills #skillBoxes .skillBox p {
   font-size: 20px;
   padding: 10% 0%;
   font-style: italic;
   font-weight: bold;
 }
 
-body #skill #skillBoxes .skillBox i {
+body #skills #skillBoxes .skillBox i {
   font-size: 4em;
   -webkit-transition: 0.8s;
   transition: 0.8s;
@@ -383,14 +397,14 @@ footer {
 }
 
 #socialMedia p {
-  font-size: 20px;
+  font-size: 18px;
   margin-top: 40px;
   text-align: center;
   font-weight: 900;
 }
 
 #form {
-  width: 60%;
+  width: 350px;
 }
 
 #formCont h3 {
@@ -421,7 +435,7 @@ form {
   font-size: 25px;
   -webkit-box-shadow: 10px 10px 10px #003677;
           box-shadow: 10px 10px 10px #003677;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 #submit {
@@ -429,14 +443,18 @@ form {
   color: #000;
   text-align: center;
   margin: 18px 2px;
-  -webkit-box-shadow: #000 0px 10px 14px -7px;
-          box-shadow: #000 0px 10px 14px -7px;
+  -webkit-box-shadow: 0px 10px 14px -7px #000;
+          box-shadow: 0px 10px 14px -7px #000;
   border: none;
   width: 60%;
-  border-radius: 3px;
+  border-radius: 5px;
   font-size: 20px;
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 #submit:hover {
@@ -455,53 +473,29 @@ input, textarea {
   margin: 5px;
   padding: 5px;
   width: 95%;
-  border-radius: 3px;
+  border-radius: 5px;
+  border: none;
   font-size: 18px;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #b596ba;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #b596ba;
+}
+
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  color: #b596ba;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #b596ba;
 }
 
 textarea:focus, input:focus {
   outline: none;
   border: 2px solid #fff;
 }
-
-/*
-    .cleaner{clear:both;}
-
-
-    #skills #skillBar .blok {
-      width: 100%;
-      background-color: #ddd;
-      border-radius: 5px;
-    }
-    #skills #skillBar .blok .skills {
-      border-radius: 5px 0px 0px 5px;
-      text-align: left;
-      padding: 8px;
-      color: #fff;
-      margin-bottom: 20px;
-    }
-    #skills #skillBar .blok .skills span {
-      float: right;
-    }
-    #skills #skillBar .blok .html {
-      width: 90%;
-      background-color: #00b6b6;
-    }
-    #skills #skillBar .blok .css {
-      width: 70%;
-      background-color: #00b6b6;
-    }
-    #skills #skillBar .blok .photoshop {
-      width: 45%;
-      background-color: #00b6b6;
-    }
-    #skills #skillBar .blok .seo {
-      width: 65%;
-      background-color: #00b6b6;
-    }
-    #skills #skillBar .blok .boot {
-      width: 50%;
-      background-color: #00b6b6;
-    }
-    */
 /*# sourceMappingURL=style.css.map */
