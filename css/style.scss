@@ -208,6 +208,7 @@ body #skill #skillBoxes .skillBox {
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+  background-color: $boja1;
 }
 body #skill #skillBoxes .skillBox:hover {
 transform: rotate(10deg);
