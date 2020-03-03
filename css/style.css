@@ -574,6 +574,7 @@ textarea:focus, input:focus {
 @media screen and (max-width: 575px) {
   #more {
     font-size: 18px;
+    text-align: center;
   }
   #form {
     width: 200px;
