@@ -253,7 +253,7 @@ h3 {
           align-items: center;
 }
 
-#skills #skillBoxes {
+#skillBoxes {
   width: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -273,7 +273,7 @@ h3 {
           box-shadow: 10px 10px 10px #003677;
 }
 
-body #skills #skillBoxes .skillBox {
+.skillBox {
   width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -292,19 +292,19 @@ body #skills #skillBoxes .skillBox {
   color: #003677;
 }
 
-body #skills #skillBoxes .skillBox:hover {
+.skillBox:hover {
   -webkit-transform: rotate(10deg);
           transform: rotate(10deg);
 }
 
-body #skills #skillBoxes .skillBox p {
+.skillBox p {
   font-size: 20px;
   padding: 10% 0%;
   font-style: italic;
   font-weight: bold;
 }
 
-body #skills #skillBoxes .skillBox i {
+.skillBox i {
   font-size: 4em;
   -webkit-transition: 0.8s;
   transition: 0.8s;
@@ -497,5 +497,108 @@ input::placeholder, textarea::placeholder {
 textarea:focus, input:focus {
   outline: none;
   border: 2px solid #fff;
+}
+
+/*RESONSIVE*/
+@media screen and (max-width: 800px) {
+  #headerLeft h1 {
+    font-size: 23px;
+  }
+  #headerMenu nav ul li a {
+    font-size: 18px;
+  }
+  #pictureOfMe img {
+    width: 200px;
+  }
+  #more {
+    width: 200px;
+    font-size: 15px;
+  }
+  #form {
+    width: 300px;
+  }
+  #links h3 {
+    font-size: 20px;
+  }
+  #links p {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  #aboutMe {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #aboutMe img {
+    width: 100%;
+  }
+  #more {
+    width: 400px;
+    height: auto;
+    margin: 20px;
+    font-size: 20px;
+  }
+  #form {
+    width: 230px;
+  }
+  #projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .skillBox {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #more {
+    font-size: 18px;
+  }
+  #form {
+    width: 200px;
+  }
+  #skillBoxes .skillBox {
+    width: 100%;
+    font-size: 25px;
+  }
+  #links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #links, #formCont {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
