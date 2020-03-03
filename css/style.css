@@ -524,6 +524,16 @@ textarea:focus, input:focus {
         -ms-flex-pack: left;
             justify-content: left;
   }
+  #links p {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 910px) {
+  #more {
+    width: 80%;
+    font-size: 17px;
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -542,25 +552,6 @@ textarea:focus, input:focus {
 }
 
 @media screen and (max-width: 800px) {
-  #pictureOfMe img {
-    width: 200px;
-  }
-  #more {
-    width: 200px;
-    font-size: 15px;
-  }
-  #form {
-    width: 300px;
-  }
-  #links h3 {
-    font-size: 20px;
-  }
-  #links p {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 660px) {
   #aboutMe {
     width: 100%;
     display: -webkit-box;
@@ -577,6 +568,22 @@ textarea:focus, input:focus {
   #aboutMe img {
     width: 100%;
   }
+  #more {
+    font-size: 20px;
+    margin: 20px 0px;
+  }
+  #pictureOfMe img {
+    width: 200px;
+  }
+  #form {
+    width: 300px;
+  }
+  #links h3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 660px) {
   #more {
     width: 400px;
     height: auto;
