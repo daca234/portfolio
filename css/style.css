@@ -691,7 +691,8 @@ textarea:focus, input:focus {
             align-items: center;
   }
   #more {
-    font-size: 15px;
+    font-size: 17px;
+    width: 300px;
   }
 }
 /*# sourceMappingURL=style.css.map */
