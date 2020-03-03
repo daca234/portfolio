@@ -500,13 +500,48 @@ textarea:focus, input:focus {
 }
 
 /*RESONSIVE*/
+@media screen and (max-width: 1200px) {
+  #headerTop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #headerMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #headerTop #headerMenu {
+    font-size: 20px;
+  }
+  #headerTop h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 @media screen and (max-width: 800px) {
-  #headerLeft h1 {
-    font-size: 23px;
-  }
-  #headerMenu nav ul li a {
-    font-size: 18px;
-  }
   #pictureOfMe img {
     width: 200px;
   }
@@ -569,6 +604,13 @@ textarea:focus, input:focus {
   .skillBox {
     width: 50%;
   }
+  .items h4 {
+    color: #003677;
+    text-shadow: 10px 5px 20px #f4b7d1;
+  }
+  #pLink {
+    color: #003677;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -576,8 +618,26 @@ textarea:focus, input:focus {
     font-size: 18px;
     text-align: center;
   }
-  #form {
-    width: 200px;
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #formCont {
+    width: 90%;
+  }
+  #links {
+    width: 90%;
   }
   #skillBoxes .skillBox {
     width: 100%;
@@ -598,8 +658,11 @@ textarea:focus, input:focus {
         -ms-flex-align: center;
             align-items: center;
   }
-  #links, #formCont {
-    width: 100%;
+  #headerTop h1 {
+    font-size: 25px;
+  }
+  #headerMenu ul li a {
+    font-size: 18px;
   }
 }
 /*# sourceMappingURL=style.css.map */
