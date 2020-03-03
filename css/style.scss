@@ -272,7 +272,7 @@ h3{
   footer{
     width: 80%;
     margin: 0px auto;
-    height:400px;
+    height:auto;
     //background-color: $boja;
     color: #000;
     display: flex;
@@ -496,11 +496,9 @@ h3{
     justify-content: center;
     align-items: center;
   }
-  #formCont{
-    width:90%;
-  }
-  #links{
-    width:90%;
+  #formCont #links {
+    width: 100%;
+
   }
   #skillBoxes .skillBox{
     width:100%;

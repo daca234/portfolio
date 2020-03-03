@@ -354,7 +354,7 @@ h3 {
 footer {
   width: 80%;
   margin: 0px auto;
-  height: 400px;
+  height: auto;
   color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -640,11 +640,8 @@ textarea:focus, input:focus {
         -ms-flex-align: center;
             align-items: center;
   }
-  #formCont {
-    width: 90%;
-  }
-  #links {
-    width: 90%;
+  #formCont #links {
+    width: 100%;
   }
   #skillBoxes .skillBox {
     width: 100%;
