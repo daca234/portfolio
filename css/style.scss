@@ -273,8 +273,6 @@ h3{
     width: 80%;
     margin: 0px auto;
     height:auto;
-    //background-color: $boja;
-    color: #000;
     display: flex;
     justify-content: space-around;
   }
@@ -490,10 +488,10 @@ h3{
   }
   #formCont #links {
     width: 100%;
+    margin: 0px auto;
   }
   #form{
-    align-content: center;
-    padding:10px;
+    padding:20px;
   }
   #skillBoxes .skillBox{
     width:100%;
@@ -514,7 +512,13 @@ h3{
 }
 @media screen and (max-width: 500px){
   #headerTop h1{
-    font-size: 15px;
+    font-size: 18px;
+  }
+  #headerMenu ul{
+    padding:2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   #more{
     font-size:15px;
