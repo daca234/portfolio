@@ -252,7 +252,9 @@ h3{
       #pictureOfMe{
         margin: auto 10px;
         padding:20px;
-        border-radius: 5px;
+        img {
+          border-radius: 5px;
+        }
       }
       #more{
         width: 300px;
@@ -329,10 +331,10 @@ h3{
         color:#000000;
         border: solid $boja1;
         width:100%;
-        height:220px;
         font-size:25px;
         box-shadow: 10px 10px 10px $boja1;
         border-radius: 5px;
+        box-sizing: border-box;
       }
         #submit{
           background-color: #fff;
@@ -355,7 +357,7 @@ h3{
           
         textarea {
           resize:none;
-          max-height:200px;
+          height:100px;
         }
         input, textarea{
           margin:5px;
@@ -386,9 +388,6 @@ h3{
   #headerMenu {
     display: flex;
     justify-content: left;
-  }
-  #links p{
-    display:none;
   }
 }
 
@@ -422,22 +421,32 @@ h3{
     width:100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    #more {
+      font-size: 20px;
+      margin:20px 0px;
+      p {
+      color: $boja2;
+        font-weight: 100;
+      }
+    }
+    #pictureOfMe img{
+      width:200px;
+    }
+  }  
+  #fLink {
+    flex-direction: column;
     align-items: center;
   }
-  #aboutMe img {
-    width:100%;
+  #formCont {
+    width: 90%;
+    #form {
+      width: 100%;
+      padding: 5%;
+    }
   }
-  #more {
-    font-size: 20px;
-    margin:20px 0px;
-  }
-  #pictureOfMe img{
-    width:200px;
-  }
-
-  #form {
-    width: 300px;
-  }
+  
   #links h3{
     font-size: 20px;
   }
@@ -452,9 +461,6 @@ h3{
     height: auto;
     margin:  20px;
     font-size: 20px;
-  }
-  #form{
-    width:230px;
   }
 
   #projects{
@@ -481,17 +487,13 @@ h3{
     font-size:18px;
     text-align: center;
   }
-  footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  footer {
+    margin-bottom: 50px;
   }
   #formCont{
-    width:300px;
+    width:90%;
     margin: 0px auto;
-  }
-  #form{
-    padding:20px;
+    padding: 0px;
   }
   #skillBoxes .skillBox{
     width:100%;
@@ -522,6 +524,11 @@ h3{
   }
   #more{
     font-size:17px;
-    width:300px;
+    width:90%;
+  }
+  #projects {
+    .listOfProjects {
+      width: 100%;
+    }
   }
 }

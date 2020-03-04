@@ -334,6 +334,9 @@ h3 {
 #pictureOfMe {
   margin: auto 10px;
   padding: 20px;
+}
+
+#pictureOfMe img {
   border-radius: 5px;
 }
 
@@ -431,11 +434,12 @@ form {
   color: #000000;
   border: solid #003677;
   width: 100%;
-  height: 220px;
   font-size: 25px;
   -webkit-box-shadow: 10px 10px 10px #003677;
           box-shadow: 10px 10px 10px #003677;
   border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 #submit {
@@ -466,7 +470,7 @@ form {
 
 textarea {
   resize: none;
-  max-height: 200px;
+  height: 100px;
 }
 
 input, textarea {
@@ -524,9 +528,6 @@ textarea:focus, input:focus {
         -ms-flex-pack: left;
             justify-content: left;
   }
-  #links p {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 910px) {
@@ -561,22 +562,39 @@ textarea:focus, input:focus {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
-  #aboutMe img {
-    width: 100%;
-  }
-  #more {
+  #aboutMe #more {
     font-size: 20px;
     margin: 20px 0px;
   }
-  #pictureOfMe img {
+  #aboutMe #more p {
+    color: #f4b7d1;
+    font-weight: 100;
+  }
+  #aboutMe #pictureOfMe img {
     width: 200px;
   }
-  #form {
-    width: 300px;
+  #fLink {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #formCont {
+    width: 90%;
+  }
+  #formCont #form {
+    width: 100%;
+    padding: 5%;
   }
   #links h3 {
     font-size: 20px;
@@ -589,9 +607,6 @@ textarea:focus, input:focus {
     height: auto;
     margin: 20px;
     font-size: 20px;
-  }
-  #form {
-    width: 230px;
   }
   #projects {
     display: -webkit-box;
@@ -626,23 +641,12 @@ textarea:focus, input:focus {
     text-align: center;
   }
   footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    margin-bottom: 50px;
   }
   #formCont {
-    width: 300px;
+    width: 90%;
     margin: 0px auto;
-  }
-  #form {
-    padding: 20px;
+    padding: 0px;
   }
   #skillBoxes .skillBox {
     width: 100%;
@@ -688,7 +692,10 @@ textarea:focus, input:focus {
   }
   #more {
     font-size: 17px;
-    width: 300px;
+    width: 90%;
+  }
+  #projects .listOfProjects {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
