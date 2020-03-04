@@ -12,7 +12,7 @@
 
 body {
   background: #f4b7d1;
-  background: linear-gradient(159deg, #f4b7d1 15%, #003677 50%, #f4b7d1 100%);
+  background: linear-gradient(159deg, #f4b7d1 8%, #003677 50%, #f4b7d1 105%);
 }
 
 a {
@@ -366,6 +366,18 @@ footer {
       justify-content: space-around;
 }
 
+#links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 #links, #formCont {
   width: 50%;
   padding: 40px;
@@ -381,14 +393,16 @@ footer {
   text-align: center;
 }
 
-#socialMedia, #code {
-  margin-bottom: 20px;
+#code h3 {
+  padding: 0px;
+  margin-bottom: 0px;
 }
 
 #socialMedia a {
   color: #f4b7d1;
   font-size: 23px;
   text-align: center;
+  margin: 0px 10px;
 }
 
 #socialMedia a:hover {
@@ -503,6 +517,19 @@ textarea:focus, input:focus {
   border: 2px solid #fff;
 }
 
+#footerRights {
+  width: 80%;
+  text-align: center;
+  border-top: 1px solid #003677;
+  padding: 10px 0px;
+  margin: 0px auto;
+}
+
+#footerRights p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
 /*RESONSIVE*/
 @media screen and (max-width: 1200px) {
   #headerTop {
@@ -598,6 +625,7 @@ textarea:focus, input:focus {
   }
   #links h3 {
     font-size: 20px;
+    padding: 0px;
   }
 }
 

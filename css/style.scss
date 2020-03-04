@@ -18,7 +18,7 @@ $boja3: #b596ba;
 
 body{
   background: rgb(244,183,209);
-  background: linear-gradient(159deg, rgba(244,183,209,1) 15%, rgba(0,54,119,1) 50%, rgba(244,183,209,1) 100%);
+  background: linear-gradient(159deg, rgba(244,183,209,1) 8%, rgba(0,54,119,1) 50%, rgba(244,183,209,1) 105%);
 }
 
 a {
@@ -67,7 +67,6 @@ h3{
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
-    
     #headerTop {
       width: 100%;
       box-sizing: border-box;
@@ -279,6 +278,11 @@ h3{
     display: flex;
     justify-content: space-around;
   }
+  #links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
     #links, #formCont{
       width:50%;
       padding: 40px;
@@ -291,13 +295,15 @@ h3{
       #socialMedia, code, ul{
         text-align: center;
       }
-      #socialMedia, #code{
-        margin-bottom: 20px;
+      #code h3{
+        padding: 0px;
+        margin-bottom: 0px;
       }
       #socialMedia a{
         color: $boja2;
         font-size: 23px;
         text-align: center;
+        margin: 0px 10px;
           &:hover{
             color:#fff;
           }
@@ -374,6 +380,17 @@ h3{
           outline: none;
           border: 2px solid #fff;
         }
+  #footerRights{
+    width: 80%;
+    text-align: center;
+    border-top: 1px solid $boja1;
+    padding: 10px 0px;
+    margin: 0px auto;
+    p{
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
     
 /*RESONSIVE*/
 
@@ -449,6 +466,7 @@ h3{
   
   #links h3{
     font-size: 20px;
+    padding: 0px;
   }
 
 }
