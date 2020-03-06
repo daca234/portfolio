@@ -706,6 +706,7 @@ textarea:focus, input:focus {
     font-size: 18px;
   }
   #headerMenu ul {
+    margin-top: 10px;
     padding: 2px;
     display: -webkit-box;
     display: -ms-flexbox;
